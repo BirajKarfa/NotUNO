@@ -1,0 +1,19 @@
+cat > .gitignore << 'EOF'
+# Node (frontend)
+frontend/notuno-frontend/node_modules/
+frontend/notuno-frontend/build/
+
+# Python (backend)
+backend/venv/
+backend/__pycache__/
+*.pyc
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+EOF
