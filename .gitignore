@@ -1,19 +1,43 @@
 cat > .gitignore << 'EOF'
-# Node (frontend)
-frontend/notuno-frontend/node_modules/
-frontend/notuno-frontend/build/
+# ===== Python / Flask =====
+# Virtualenv
+/backend/venv/
+/backend/env/
+# Byte-compiled
+/backend/__pycache__/
+/*.py[cod]
+# dotenv
+*.env
 
-# Python (backend)
-backend/venv/
-backend/__pycache__/
-*.pyc
+# ===== Node / React =====
+# Dependencies
+/frontend/node_modules/
+/frontend/notuno-frontend/node_modules/
+# Production build
+/frontend/build/
+/frontend/notuno-frontend/build/
+/frontend/dist/
 
-# Logs
-*.log
+# dotenv
+/frontend/.env
+/frontend/notuno-frontend/.env
+
+# npm logs
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 
-# OS
+# ===== IDEs & OS =====
+# VSCode
+.vscode/
+# JetBrains
+.idea/
+# macOS
 .DS_Store
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===== Misc =====
+*.log
 EOF
