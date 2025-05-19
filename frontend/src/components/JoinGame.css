@@ -1,0 +1,19 @@
+.join-container {
+  margin-top: 80px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.join-container input {
+  padding: 8px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.join-container button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  margin-top: 10px;
+}

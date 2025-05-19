@@ -1,0 +1,142 @@
+/* src/components/GameBoard.css */
+
+/* Container for the entire board */
+.board {
+  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+/* Bar showing all players and their card counts */
+.players-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+/* Individual player chip */
+.player-chip {
+  background: #ddd;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* “Start Game” button for the host */
+.start-btn {
+  padding: 12px 20px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.start-btn:hover {
+  background: #218838;
+}
+
+/* Area showing current turn and top discard */
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  align-items: center;
+}
+
+/* Special styling on the top-discard card container */
+.top-card {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+/* Container for the player's hand */
+.hand {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Base styling for every card */
+.card {
+  position: relative;          /* enable corner logos */
+  width: 60px;
+  height: 90px;
+  line-height: 90px;
+  margin: 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+/* “notUno” logo in the top-left corner */
+.card::before {
+  content: "notUno";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 8px;
+  color: rgba(255,255,255,0.8);
+}
+
+/* “notUno” logo in the bottom-right corner, flipped */
+.card::after {
+  content: "notUno";
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-size: 8px;
+  color: rgba(255,255,255,0.8);
+  transform: rotate(180deg);
+}
+
+/* Hover effect on cards */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Color classes for cards */
+.card.R { background: #e74c3c; }
+.card.G { background: #27ae60; }
+.card.B { background: #2980b9; }
+.card.Y { background: #f1c40f; color: #333; }
+/* Wild card (color choice) */
+.card.W { background: #333; }
+
+/* Draw pile styled as inverted card back */
+/* Remove any corner logos from the draw pile */
+.draw-pile::before,
+.draw-pile::after {
+  content: none !important;
+}
+
+.draw-pile {
+  width: 60px;
+  height: 90px;
+  line-height: 90px;
+  background: #2c3e50; /* card-back color */
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 auto 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform: rotate(180deg);
+}
+.draw-pile:hover {
+  background: #34495e;
+}
